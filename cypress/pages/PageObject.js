@@ -39,6 +39,37 @@ class Pages {
         return cy.get('[data-testid=ta-web-ui-wrap]');
     }
 
+    hiring_school_contact()
+    {
+        return cy.get('#schoolContactDirectly > [data-testid=ta-web-ui-toggle-options] > .ta-web-ui-toggle-btn__single--green');
+    }
+
+    online_teaching_interest()
+    {
+        return cy.get('#interesedOnlineTeaching > [data-testid=ta-web-ui-toggle-options] > .ta-web-ui-toggle-btn__single--green');
+    }
+
+    TEFL_certificated_interest()
+    {
+        return cy.get('#interesedTEFL > [data-testid=ta-web-ui-toggle-options] > .ta-web-ui-toggle-btn__single--green > span');
+    }
+
+    teacher_certification_interest()
+    {
+        return cy.get('#interesedTeacherCertification > [data-testid=ta-web-ui-toggle-options] > .ta-web-ui-toggle-btn__single--green');
+    }
+
+    button_about()
+    {
+        return cy.get('[data-testid=ta-web-ui-wrap]');
+    }
+
+    select_country()
+
+    {
+        return cy.get('.ta-web-ui-input-combobox__icons > #close > .cls-1');
+    }
+
 
 }
 

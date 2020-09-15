@@ -19,7 +19,7 @@ describe('Visit teach away login page', () => {
     PageObject.login_button().click();
     cy.get("h2").should('be.visible').and('contain', "I'm the secret content of the page");
 
-    // redirect to first step: Welcome
+    // First step: Welcome
     cy.visit('https://www.teachaway.me/register/steps/welcome')
     PageObject.job_title().should('be.visible').click();
     PageObject.select_jobtitle().click();
@@ -27,9 +27,19 @@ describe('Visit teach away login page', () => {
     PageObject.teaching_license().should('be.visible').click();
     PageObject.button_get_started().should('be.visible').click();
 
-    // redirect to second step: Interests
+    // Second step: Interests
     cy.url().should("eq", "https://www.teachaway.me/register/steps/interests") 
-    
+    PageObject.hiring_school_contact().click();
+    PageObject.online_teaching_interest().click();
+    PageObject.TEFL_certificated_interest().click();
+    PageObject.teacher_certification_interest().click();
+    PageObject.button_about().click();
+
+    // Third step: About
+    cy.url().should("eq", "https://www.teachaway.me/register/steps/about") 
+    PageObject.select_country().click();
+   
+  
 
   })
  
