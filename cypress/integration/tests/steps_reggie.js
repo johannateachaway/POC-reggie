@@ -38,7 +38,7 @@ describe('Visit teach away login page', () => {
     // Third step: About
     cy.url().should("eq", "https://www.teachaway.me/register/steps/about") 
     PageObject.select_country().click();
-   
+    
   
 
   })

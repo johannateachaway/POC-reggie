@@ -61,13 +61,13 @@ class Pages {
 
     button_about()
     {
-        return cy.get('[data-testid=ta-web-ui-wrap]');
+        return cy.get('//*[@id="country"]');
     }
 
     select_country()
 
     {
-        return cy.get('.ta-web-ui-input-combobox__icons > #close > .cls-1');
+        return cy.get('.ta-web-ui-input-combobox__icons > #select-triangle > .cls-1');
     }
 
 
